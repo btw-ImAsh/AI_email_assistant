@@ -6,7 +6,7 @@ import sqlite3
 from gcsa.google_calendar import GoogleCalendar
 from gcsa.event import Event
 import requests
-import json
+import json, time
 from dotenv import load_dotenv
 
 
@@ -26,7 +26,7 @@ gc = GoogleCalendar(credentials_path=CREDENTIAL_PATH_CAL)
 
 def get_emails():
     query_params = {
-    "newer_than": (5, "day"),
+    "newer_than": (2, "day"),
     "unread": True
     }
     emails = []
@@ -435,5 +435,12 @@ def main():
             print("Thank you for believing in me. Adios")
             break
 
+#Implimenting Pooling Time to get latest mails.
+def reload_ai_assistant(after_sec=180):
+    while True:
+        main()
+        time.sleep(after_sec)
+
+
 if __name__ == '__main__':
-    main()
+    reload_ai_assistant()
