@@ -156,5 +156,9 @@ You’ll see your Webhook URL (looks like https://hooks.slack.com/services/XXXX/
 
 Copy and save it securely in the .env file.
 ```
+## Integration Diagram
+
+![Untitled Diagram drawio](https://github.com/user-attachments/assets/e06b4a1f-5804-4dad-8c65-97d410ecc5f1)
+
 
 If there is functionality you'd like to see added, or any bugs in this project, please let me know by posting an issue or submitting a pull request!
